@@ -1,0 +1,105 @@
+.scene {
+
+    perspective: 600px;
+}
+
+.auth_card {
+
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    box-shadow: none;
+    position: relative;
+}
+
+.auth_card.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.auth_card__face {
+    position: absolute;
+    box-shadow: 3px 4px 12px 1px #00000070;
+    border-radius: 15px;
+}
+
+
+.auth_card__face--back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    box-shadow: 3px 4px 12px 1px #00000070;
+    border-radius: 15px;
+    transform: rotateY(180deg);
+}
+
+.auth-title {
+    text-align: center;
+    color: #eda31b;
+    text-shadow: 2px 2px 2px #000000bd;
+    border-radius: 50%;
+    font-size: 1.4rem;
+
+}
+
+
+
+.form_actions {
+    display: flex;
+    justify-content: center;
+}
+
+.form_actions button {
+    background-color: #3e3a3a;
+    color: #eda31b;
+    border: solid 2px #3e3a3a;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 15rem;
+    margin: 1rem 0;
+    height: 2rem;
+    font-weight: 900;
+    font-size: 1rem;
+
+}
+
+.form_actions button:active,
+.form_actions button:hover {
+    border-color: #eda31b;
+    background-color: #eda31b;
+    color: #3e3a3a;
+    font-weight: 900;
+}
+
+.form_actions button:disabled {
+    border-color: #aeaeae;
+    background-color: #c2c2c2;
+    color: #8c8c8c;
+    cursor: not-allowed;
+
+}
+
+.sign-in-link {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: #eda31b;
+    background: #3e3a3a;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    align-items: center;
+    font-weight: 900;
+    z-index: 8;
+    text-shadow: none;
+}
+
+
+
+.btn_flip:active,
+.btn_flip:hover {
+    border: solid 2px #eda31b;
+
+}
+
+
+.err-modal {
+    color: red !important;
+    background-color: red;
+}
